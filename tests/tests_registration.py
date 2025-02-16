@@ -19,5 +19,5 @@ class TestRegistration:
         driver.find_element(*MainPageLocators.EMAIL_INPUT).send_keys(email)
         driver.find_element(*MainPageLocators.PASSWORD_INPUT).send_keys("723nvlh0")
         driver.find_element(*MainPageLocators.REGISTER_BUTTON).click()
-        WebDriverWait(driver, 10).until(
+        assert WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located(MainPageLocators.REGISTER_BUTTON))
